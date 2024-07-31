@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Less Is More</title>
+        <meta
+            name="description"
+            content="Why doing less makes better software, from Mies van der Rohe to UNIX pipes to the less pager."
+        />
+        <link rel="canonical" href="https://pdamnme.com/blogs/lessIsMore.html" />
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1 id="less-is-more-heading">Less Is More</h1>
+                <nav class="links" aria-label="Main navigation">
+                    <a href="../index.html">Home</a>
+                </nav>
+            </header>
+
+            <main>
+                <section aria-labelledby="less-is-more-heading">
+                    <article>
+                        <h2>Who did it first, and why should you care?</h2>
+                        <p>
+                            The phrase is associated with modernist architect Ludwig Mies van der
+                            Rohe, who popularized it in the 20th century. But it first showed up in
+                            Robert Browning’s 1855 poem <em>Andrea del Sarto</em>: “Well, less is
+                            more, Lucrezia.”
+                        </p>
+                        <p>
+                            This idea applies especially well to software. Fewer abstractions,
+                            dependencies, features, and moving parts make systems easier to
+                            understand, debug, and maintain. In UI/UX, simple interfaces with a
+                            clear hierarchy perform better because users can reason about them
+                            quickly. In system design and software architecture, restraint often
+                            leads to cleaner boundaries, fewer failure modes, and better long-term
+                            design.
+                        </p>
+
+                        <h2>Who did it right?</h2>
+                        <p>
+                            I think UNIX is a good example of this. Its development began at Bell
+                            Labs in 1969. It comes with a collection of small utilities that do one
+                            thing and do it well. The philosophy (from Doug McIlroy) is that complex
+                            tasks can be performed by combining these utilities with pipes.
+                        </p>
+                        <p>
+                            Even the utilities <code>less</code> and <code>more</code> are examples
+                            of this. They are both used to view text files, but less is more
+                            powerful and flexible than more. Mark Nudelman wrote less in the early
+                            80s because he needed a more that could scroll backwards. The name is a
+                            joke about “backwards more”. On macOS, more is literally less.
+                        </p>
+
+                        <h3><code>less</code></h3>
+                        <ul>
+                            <li>Can scroll backwards, even through piped input</li>
+                            <li>Can search backwards as well as forwards</li>
+                            <li>Doesn’t quit when it reaches the end of the file</li>
+                            <li>
+                                Can follow a growing file, like <code>tail -f</code> (press
+                                <code>F</code>)
+                            </li>
+                            <li>
+                                Commands are based on both <code>more</code> and <code>vi</code>
+                            </li>
+                        </ul>
+
+                        <p>From the man page:</p>
+                        <blockquote>
+                            <p>
+                                Less is a program similar to more(1), but it has many more features. Less does not have to read the entire input file before starting, so with large input files it starts up faster than text editors like vi(1).
+                            </p>
+                        </blockquote>
+
+                        <h3><code>more</code></h3>
+                        <p>Don’t use more.</p>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
