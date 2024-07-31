@@ -1,0 +1,198 @@
+/* ===== Variables ===== */
+:root {
+  color-scheme: dark;
+
+  /* Dracula palette */
+  --dracula-background: #282a36;
+  --dracula-current-line: #44475a;
+  --dracula-foreground: #f8f8f2;
+  --dracula-comment: #6272a4;
+  --dracula-cyan: #8be9fd;
+  --dracula-green: #50fa7b;
+  --dracula-orange: #ffb86c;
+  --dracula-pink: #ff79c6;
+  --dracula-purple: #bd93f9;
+  --dracula-red: #ff5555;
+  --dracula-yellow: #f1fa8c;
+
+  /* Colors */
+  --color-bg: var(--dracula-background);
+  --color-text: var(--dracula-foreground);
+  --color-text-muted: var(--dracula-comment);
+  --color-heading: var(--dracula-purple);
+  --color-subheading: var(--dracula-pink);
+  --color-link: var(--dracula-cyan);
+  --color-link-hover: var(--dracula-green);
+  --color-code: var(--dracula-green);
+  --color-border: var(--dracula-current-line);
+  --color-selection-bg: var(--dracula-current-line);
+  --color-selection-text: var(--dracula-foreground);
+
+  /* Size scale (--size-N = N × 0.0625rem) */
+  --size-1: 0.0625rem;
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-12: 0.75rem;
+  --size-14: 0.875rem;
+  --size-16: 1rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-28: 1.75rem;
+  --size-32: 2rem;
+  --size-40: 2.5rem;
+  --size-44: 2.75rem;
+  --size-56: 3.5rem;
+
+  /* Typography */
+  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-size-sm: var(--size-14);
+  --font-size-base: var(--size-16);
+  --font-size-lg: var(--size-20);
+  --font-size-xl: clamp(var(--size-32), 6vw, var(--size-44));
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-base: 1.65;
+
+  /* Layout */
+  --container-max-width: 48rem;
+  --border-width: var(--size-1);
+  --underline-offset: var(--size-4);
+}
+
+/* ===== Base ===== */
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-selection-bg);
+  color: var(--color-selection-text);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--size-56) var(--size-24);
+}
+
+header {
+  padding-bottom: var(--size-32);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+  line-height: var(--line-height-tight);
+  margin: 0 0 var(--size-16);
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-subheading);
+  margin: 0 0 var(--size-16);
+}
+
+h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-subheading);
+  margin: 0 0 var(--size-4);
+}
+
+section {
+  margin-top: var(--size-40);
+}
+
+article {
+  margin-bottom: var(--size-28);
+}
+
+.experience article {
+  padding-bottom: var(--size-24);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+p {
+  margin: 0 0 var(--size-8);
+}
+
+article p:last-child {
+  margin: 0;
+}
+
+.meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+  text-underline-offset: var(--underline-offset);
+}
+
+code {
+  color: var(--color-code);
+}
+
+/* ===== Components ===== */
+.links {
+  display: flex;
+  gap: var(--size-24);
+  margin-top: var(--size-20);
+  font-size: var(--font-size-sm);
+}
+
+.experience h2 {
+  margin-bottom: var(--size-24);
+}
+
+.blog-container {
+  margin-top: var(--size-32);
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-12);
+  margin-top: var(--size-12);
+}
+
+.blog-list a {
+  display: inline-block;
+  width: fit-content;
+  padding-left: var(--size-4);
+}
+
+/* ===== Responsive ===== */
+/* Media queries can't read custom properties, so the breakpoint stays literal. */
+@media (max-width: 36rem) {
+  .container {
+    padding: var(--size-40) var(--size-20);
+  }
+
+  .links {
+    gap: var(--size-16);
+    flex-wrap: wrap;
+  }
+}
