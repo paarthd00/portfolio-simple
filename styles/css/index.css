@@ -21936,7 +21936,7 @@ HEADER
 }
 /**--------------------------
 ----------------------------
-TYPOGRAPHY 
+TYPOGRAPHY
 ----------------------------
 ---------------------------- */
 body {
@@ -21954,6 +21954,18 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: #ab6b49;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #f9f3ed;
+}
+a:visited {
+  color: #ab6b49;
+}
+
 p.sm {
   font-family: Urbanist;
   font-size: 0.8125rem;
@@ -21968,7 +21980,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  color: #000;
+  color: #f9f3ed;
   font-size: 1.5625rem;
   line-height: 2.1875rem;
   letter-spacing: 0.04688rem;
@@ -21993,6 +22005,300 @@ h2, .h2 {
     line-height: 3.0625rem;
     letter-spacing: 0.06938rem;
   }
+}
+/*--------------------------
+----------------------------
+NAVIGATION
+----------------------------
+---------------------------- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(24, 24, 24, 0.5);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(249, 243, 237, 0.1);
+  padding: 1.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 86.6rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f9f3ed;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+.nav-brand:hover {
+  color: #ab6b49;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: #f9f3ed;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ab6b49;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover {
+  color: #ab6b49;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/*--------------------------
+----------------------------
+MAGAZINE LAYOUT
+----------------------------
+---------------------------- */
+.magazine-section {
+  max-width: 86.6rem;
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+}
+
+.magazine-hero {
+  text-align: center;
+  margin-bottom: 5rem;
+  padding: 3rem 0;
+}
+.magazine-hero h1, .magazine-hero .h1 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+  color: #f9f3ed;
+  line-height: 1.1;
+}
+.magazine-hero .subtitle {
+  font-size: 1.125rem;
+  color: #f9f3ed;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.magazine-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .magazine-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+.experience-card,
+.project-card {
+  border-top: 1px solid rgba(249, 243, 237, 0.15);
+  padding-top: 2rem;
+  transition: all 0.3s ease;
+}
+.experience-card:hover,
+.project-card:hover {
+  transform: translateY(-4px);
+}
+.experience-card:hover .card-title,
+.project-card:hover .card-title {
+  color: #ab6b49;
+}
+.experience-card .card-meta,
+.project-card .card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.experience-card .card-date,
+.experience-card .card-location,
+.project-card .card-date,
+.project-card .card-location {
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f9f3ed;
+  font-weight: 500;
+}
+.experience-card .card-title,
+.project-card .card-title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #f9f3ed;
+  transition: color 0.3s ease;
+}
+.experience-card .card-title a,
+.project-card .card-title a {
+  color: #f9f3ed;
+  text-decoration: underline;
+  text-decoration-color: rgba(249, 243, 237, 0.3);
+  text-underline-offset: 0.25rem;
+  transition: all 0.3s ease;
+}
+.experience-card .card-title a:hover,
+.project-card .card-title a:hover {
+  color: #ab6b49;
+  text-decoration-color: #ab6b49;
+}
+.experience-card .card-subtitle,
+.project-card .card-subtitle {
+  font-size: 1.125rem;
+  color: #ab6b49;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.experience-card .card-description,
+.project-card .card-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #f9f3ed;
+  margin-bottom: 1rem;
+}
+.experience-card .card-description strong,
+.project-card .card-description strong {
+  color: #f9f3ed;
+  font-weight: 600;
+}
+
+.project-card .project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ab6b49;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+.project-card .project-link:hover {
+  gap: 0.75rem;
+  color: #f9f3ed;
+}
+.project-card .project-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/*--------------------------
+----------------------------
+TYPOGRAPHY ENHANCEMENTS
+----------------------------
+---------------------------- */
+.magazine-section h3, .magazine-section .h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f9f3ed;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+}
+.magazine-section h3::after, .magazine-section .h3::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 1px;
+  background: #ab6b49;
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(249, 243, 237, 0.2), transparent);
+  margin: 5rem 0;
+}
+
+/*--------------------------
+----------------------------
+RESPONSIVE ADJUSTMENTS
+----------------------------
+---------------------------- */
+@media (max-width: 768px) {
+  .magazine-hero h1, .magazine-hero .h1 {
+    font-size: 2.5rem;
+  }
+  .nav-links {
+    gap: 1.5rem;
+  }
+  .nav-links a {
+    font-size: 0.8125rem;
+  }
+  .magazine-section {
+    padding: 6rem 1.5rem 3rem;
+  }
+}
+/*--------------------------
+----------------------------
+BUTTONS
+----------------------------
+---------------------------- */
+.btn-outline-primary {
+  color: #f9f3ed;
+  border-color: #f9f3ed;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+.btn-outline-primary:hover {
+  background-color: #ab6b49;
+  border-color: #ab6b49;
+  color: #f9f3ed;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(171, 107, 73, 0.3);
+}
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(249, 243, 237, 0.3);
+}
+.btn-outline-primary:active {
+  background-color: #ab6b49;
+  border-color: #ab6b49;
+  color: #f9f3ed;
 }
 
 /*# sourceMappingURL=index.css.map */
