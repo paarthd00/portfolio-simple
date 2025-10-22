@@ -22240,16 +22240,6 @@ TYPOGRAPHY ENHANCEMENTS
   text-align: center;
   position: relative;
 }
-.magazine-section h3::after, .magazine-section .h3::after {
-  content: "";
-  position: absolute;
-  bottom: -1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3rem;
-  height: 1px;
-  background: #ab6b49;
-}
 
 .section-divider {
   height: 1px;
