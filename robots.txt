@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://paarthdhammi.com/sitemap.xml
+
+# Optimize crawl rate
+Crawl-delay: 1
