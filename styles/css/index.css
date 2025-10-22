@@ -22096,6 +22096,11 @@ MAGAZINE LAYOUT
   margin-bottom: 5rem;
   padding: 3rem 0;
 }
+@media (max-width: 768px) {
+  .magazine-hero {
+    margin-bottom: 0rem;
+  }
+}
 .magazine-hero h1, .magazine-hero .h1 {
   font-size: 4.5rem;
   font-weight: 300;
@@ -22259,16 +22264,16 @@ RESPONSIVE ADJUSTMENTS
 ---------------------------- */
 @media (max-width: 768px) {
   .magazine-hero h1, .magazine-hero .h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
   .nav-links {
-    gap: 1.5rem;
+    gap: 1.5rem !important;
   }
   .nav-links a {
-    font-size: 0.8125rem;
+    font-size: 0.8125rem !important;
   }
   .magazine-section {
-    padding: 6rem 1.5rem 3rem;
+    padding: 6rem 1.5rem 3rem !important;
   }
 }
 /*--------------------------

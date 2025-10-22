@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass-watch": "sass -w styles/sass/main.scss styles/css/index.css"
+    "sass-watch": "sass -w styles/sass/main.scss styles/css/index.css --silence-deprecation=mixed-decls"
   },
   "author": "",
   "license": "ISC",
