@@ -57,3 +57,10 @@ resource "cloudflare_workers_custom_domain" "www" {
   service    = cloudflare_workers_script.portfolio.script_name
   zone_id    = var.cloudflare_zone_id
 }
+
+# Redirect all plain-HTTP traffic to HTTPS at the edge.
+resource "cloudflare_zone_setting" "always_use_https" {
+  zone_id    = var.cloudflare_zone_id
+  setting_id = "always_use_https"
+  value      = "on"
+}

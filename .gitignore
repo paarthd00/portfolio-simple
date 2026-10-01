@@ -1,9 +1,15 @@
 # Terraform
 .terraform/
-terraform.tfstate
-terraform.tfstate.*
-terraform.tfvars
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.tfplan
 crash.log
+crash.*.log
+
+# Note: .terraform.lock.hcl is intentionally NOT ignored — commit it so
+# everyone gets the same provider versions.
 
 # Local secrets
 .env
