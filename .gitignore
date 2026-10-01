@@ -1,0 +1,9 @@
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+terraform.tfvars
+crash.log
+
+# Local secrets
+.env
