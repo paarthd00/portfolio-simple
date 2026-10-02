@@ -3,6 +3,3 @@ Allow: /
 
 # Sitemap
 Sitemap: https://pdamnme.com/sitemap.xml
-
-# Optimize crawl rate
-Crawl-delay: 1
