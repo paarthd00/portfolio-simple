@@ -18,9 +18,8 @@ variable "cloudflare_account_id" {
 }
 
 variable "domain" {
-  description = "Domain to serve the site on. Must be an active zone in the same Cloudflare account."
+  description = "Apex domain to serve the site on. Must be an active zone in the same Cloudflare account."
   type        = string
-  default     = "pdamnme.com"
 }
 
 variable "cloudflare_zone_id" {
@@ -28,11 +27,16 @@ variable "cloudflare_zone_id" {
   type        = string
 }
 
+variable "worker_name" {
+  description = "Name for the Cloudflare Worker that serves the static site."
+  type        = string
+}
+
 # Uploads everything in ./site as static assets served from the edge.
 # Re-run `terraform apply` after changing files in ./site to deploy.
 resource "cloudflare_workers_script" "portfolio" {
   account_id  = var.cloudflare_account_id
-  script_name = "portfolio-simple"
+  script_name = var.worker_name
 
   compatibility_date = "2026-09-30"
 
