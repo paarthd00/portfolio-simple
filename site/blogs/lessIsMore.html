@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Less is More</title>
+        <meta name="description" content="less is more" />
+        <link rel="canonical" href="https://pdamnme.com/blogs/lessIsMore.html" />
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header>
+                <h1>Less Is More</h1>
+                <nav class="links" aria-label="Main navigation">
+                    <a href="../index.html">Home</a>
+                </nav>
+            </header>
+
+            <main>
+                <section aria-labelledby="less-is-more-heading">
+                    <article>
+                        <h3>What does it mean, and why should you care?</h3>
+                        <p>
+                            It is strongly associated with modernist architect Ludwig Mies van der
+                            Rohe, who popularized the phrase in the 20th century.
+                        </p>
+                        <p>
+                            This idea applies especially well to software. Fewer abstractions,
+                            dependencies, features, and moving parts make systems easier to
+                            understand, debug, and maintain. In UI/UX, simple interfaces with a clear hierarchy perform better because users can reason about them quickly. In computer system design and software architecture, restraint often leads to cleaner boundaries, fewer failure modes, and better long-term design.
+                        </p>
+
+                        <h3>History of doing more with less in computer science</h3>
+                        <p>I guess it has to start with UNIX.</p>
+
+                        <h3>What software clearly inherits this, and what we should point out</h3>
+                        <p>
+                            I think UNIX is the best example of this. Its development began at Bell
+                            Labs in 1969. It is a collection of small utilities that do one thing and do it well. The philosophy is that complex tasks can be performed by combining these utilities together.
+                        </p>
+                        <p>
+                            Even the utilities <em>less</em> and <em>more</em> are examples of this. They are both used to view text files, but less is more powerful and flexible than more.
+                        </p>
+
+                        <h4>LESS</h4>
+                        <ul>
+                            <li>Can scroll by single lines</li>
+                            <li>Can scroll backwards</li>
+                            <li>Does not need to read the entire file before starting</li>
+                            <li>Commands are based on both more and vi</li>
+                        </ul>
+
+                        <p>
+                            From the man page: “Less is a program similar to more (1), but which
+                            allows backward movement in the file as well as forward movement. Also,
+                            less does not have to read the entire input file before starting, so with large input files it starts up faster than text editors like vi (1).”
+                        </p>
+
+                        <h4>MORE</h4>
+                        <p>Don’t use more.</p>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
